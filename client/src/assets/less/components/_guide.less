@@ -1,0 +1,98 @@
+
+
+//核身流程
+.guide-ul{
+	display: table;
+	width: 100%;
+	margin:0;
+	padding:0;
+	margin-left: 60px;
+	>li{
+		margin:0;
+		padding: 0;
+		display: table-cell;
+		width: 33.33%;
+		background-repeat: no-repeat;
+		background-position: 0px 30px;
+		padding-left: 100px;
+		>h4{
+			font-size: @large-FontSize!important;
+			font-weight: bold;
+			padding-bottom: 20px;
+		}
+		&.bg1{
+			background-image:url('@{images-url}verify1_1.png') ;
+			>h4{
+				color: #f46c6c;
+			}
+		}
+		&.bg2{
+			background-image:url('@{images-url}verify1_2.png') ;
+			>h4{
+				color: #afc4e8;
+			}
+		}
+		&.bg3{
+			background-image:url('@{images-url}verify1_3.png') ;
+			>h4{
+				color: #ffd47d;
+			}
+		}
+	}
+	>dt ,dd, dl{
+		list-style: none;
+		margin: 0;
+		padding:0;
+	}
+
+  &.personal {
+    margin: 0;
+
+    > li {
+      background-repeat: no-repeat;
+      background-position: center top;
+      padding-left: 0;
+      padding-top: 167px;
+      > h4 {
+        padding-top: 10px;
+        text-align: center;
+      }
+      &.bg1 {
+        background-image: url('@{images-url}1.jpg');
+        > h4 {
+          color: @warning-FontColor;
+        }
+      }
+      &.bg2 {
+        background-image: url('@{images-url}2.jpg');
+        > h4 {
+          color: @warning-FontColor;
+        }
+      }
+      &.bg3 {
+        background-image: url('@{images-url}3.jpg');
+        > h4 {
+          color: @warning-FontColor;
+        }
+      }
+    }
+
+    >dt ,dd, dl{
+      text-align: center;
+    }
+  }
+}
+
+.guide-text{
+	display: inline-block;
+	margin: 15px auto;
+	text-align: left;
+	ul, li {
+		margin: 0;
+		padding: 0;
+	}
+	ul{
+		margin:20px 0 0 15px;
+        list-style: inherit;
+	}
+}

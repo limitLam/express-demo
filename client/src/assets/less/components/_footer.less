@@ -1,0 +1,74 @@
+@footer-bd-width: 1px 0 0;
+@footer-bd-style: solid;
+@footer-bd-color: #eee;
+@footer-pd: 20px 0;
+@footer-mg: 30px 0 0;
+@footer-color: #666;
+@footer-copyright-color: #999;
+@footer-link: @footer-color;
+
+.main-footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: @footer-mg;
+  background: #fff;
+  border-width: @footer-bd-width;
+  border-style: @footer-bd-style;
+  border-color: @footer-bd-color;
+}
+.main-ft-inner{
+  margin: 0 auto;
+  padding: @footer-pd;
+  width: @frm-wrap-w;
+  .clearfix();
+  color: @footer-color;
+
+  a{
+    color: @footer-link;
+
+    &:hover{
+      color: lighten(@footer-link, 10%);
+    }
+  }
+}
+.main-ft-copyright{
+  float: left;
+  color: @footer-copyright-color;
+}
+.main-ft-helper{
+  float: right;
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+
+  li{
+    display: inline;
+
+    &.has-r-line{
+      padding-right: 10px;
+      margin-right: 10px;
+      border-right: 1px solid #cbcbcb;
+    }
+
+    b{
+      font-weight: 500;
+      margin-left: 10px;
+      font-size: @frm-base-size + 4px;
+    }
+
+    i{
+      font-size: @base-FontSize;
+      margin-right: 5px;
+      //.inline-block();
+      //vertical-align: middle;
+      //width: 18px;
+      //height: 18px;
+      //background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAkCAMAAACzM5rVAAABCFBMVEX///9mZmZnZ2f9/f2SkpLNzc1ubm7e3t7c3NzCwsKampqUlJSwsLB3d3fa2tptbW34+PjIyMhqamr39/f19fXv7+/Ozs6np6eDg4Py8vL6+vqhoaGCgoKsrKyenp59fX18fHy4uLjj4+PHx8ecnJyFhYVwcHCJiYmZmZloaGipqang4OCNjY16enqgoKCBgYGfn5+Ojo709PTk5OTd3d2KioqkpKTx8fGlpaWTk5OVlZVzc3PPz8/BwcGEhIR0dHTZ2dmvr6/T09Otra3+/v7u7u6ioqJsbGzs7Ox/f3/Ly8vb29uMjIz29vb8/Px+fn6IiIjp6elxcXG+vr55eXnf39+Hh4fo6OimP5WhAAABB0lEQVR42rWQ13LCMBBF97pgYxt3ehIg9JLeK+kNEkj//z+JHBxj+YmX3BmNtEe7q6slWlSl3ObE6t5XG44XktUjAaG2lBmpYK7MiBF7gLjOt4lktqdiK01UBiSzhnWzh0tTYwGRHly8ulekCv2gpEDUAzbqZWHg6NDqU0AjuhC49pCJxBWO6CXmoijF8toPv179KO/kMBv+KM+iQvNLMpS/X+8MkXnPHhRF+hcpe5VcAi2xyfV5FJhcfuGQC7hnvKk2kLf5whqrSzj/bqJ1mnjSsVDd5ZF43cWjyg7PXsTsfeDjyf/sNNSI+XeA1WGe1+a1npGaDTbW70YeJxHRbfr4rWUsPKwfIH4URytxQ8IAAAAASUVORK5CYII=) no-repeat;
+      //*background-image: url("../images/ft-icon.png");
+
+    }
+  }
+}

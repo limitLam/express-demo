@@ -1,0 +1,36 @@
+/*  所有table样式 */
+.table{
+    width: 100%;
+    th,td{
+        padding: 5px 10px;
+    }
+    th{
+        text-align: right;
+    }
+    td{
+        text-align: left;
+    }
+    //文字左对齐
+    &-text-left{
+        th,td{
+            text-align: left;
+        }
+    }
+    //文字居中对齐
+    &-text-center{
+        th,td{
+            text-align: center;
+        }
+    }
+    //文字顶部对齐
+    &-valign-top{
+        th,td{
+            vertical-align: top;
+        }
+    }
+    &-border{
+        th,td{
+            border-bottom: 1px solid @base-BorderColor;
+        }
+    }
+}

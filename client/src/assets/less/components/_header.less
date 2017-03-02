@@ -1,0 +1,150 @@
+
+
+//config
+  //尺寸
+  @gap-TheMainNav: 10px;
+  @width-TheMainNav: 1200px;
+  @height-TheMainNav: 65px;
+  @height-Btn-TheMainNav: 62px;
+  @height-Btn-Lv2-TheMainNav: 40px;
+  @fontSize-TheMainNav: 14px;
+  @fontSize-Logo-TheMainNav: 18px;
+  @line-height-TheMainNav: 1.4;
+  //颜色
+  @bgColor-TheMainNav: #40444e;
+  @fontColor1-TheMainNav: #999;
+  @linkColor-Hover-TheMainNav: #fff;
+
+
+// ******************
+// 主导航样式
+// ******************
+.the-main-nav-wrap {
+  background: url("@{images-url}hdbg.jpg") @bgColor-TheMainNav center center repeat-x;
+  min-width: @width-TheMainNav;
+
+}
+
+.the-main-nav-box {
+  width: @width-TheMainNav;
+  height: @height-TheMainNav;
+  margin: 0 auto;
+  .clearfix();
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.the-main-nav {
+  .reset-list(left,block,0,0);
+  float: right;
+  padding-top: @gap-TheMainNav;
+
+  > li {
+    font-size: @fontSize-TheMainNav;
+    line-height: @line-height-base;
+    position: relative;
+
+    > span,
+    >a {
+      line-height: @height-Btn-TheMainNav;
+      height: @height-Btn-TheMainNav;
+      padding: 0 25px;
+      color: @fontColor1-TheMainNav;
+    }
+
+    > span {
+      cursor: default;
+    }
+
+    > a {
+      .link-custom(@fontColor1-TheMainNav,@linkColor-Hover-TheMainNav,none);
+    }
+
+    > ul {
+      .reset-list(none,block,@fontSize-TheMainNav,@line-height-TheMainNav);
+      position: absolute;
+      top: @height-Btn-TheMainNav;
+      left: 0;
+      right: 0;
+      display: none;
+
+      > li > a {
+        .link-custom(@fontColor1-TheMainNav,@linkColor-Hover-TheMainNav,none);
+        padding: 10px;
+        line-height: @line-height-TheMainNav;
+        display: block;
+        text-align: center;
+        background-color: @bgColor-TheMainNav;
+
+        &:hover {
+          background-color: lighten(@bgColor-TheMainNav, 2.5%);
+        }
+      }
+    }
+
+    &:hover {
+
+      > span,
+      >a {
+        color: @linkColor-Hover-TheMainNav;
+      }
+
+      > ul {
+        display: block;
+      }
+    }
+
+    &.current {
+
+      > span,
+      >a {
+        color: @linkColor-Hover-TheMainNav;
+      }
+    }
+  }
+}
+
+// ******************
+// logo样式
+// ******************
+.logo-wrap {
+  height: @height-TheMainNav;
+  line-height: @height-TheMainNav;
+  float: left;
+  padding-left: 174px;
+  font-size: @fontSize-Logo-TheMainNav;
+  font-weight: bold;
+  background: url("@{images-url}logo.png") transparent left center no-repeat;
+  .link-custom(@default-FontColor,@default-FontColor,none);
+}
+
+// ******************
+// 登录注销
+// ******************
+.login-box {
+  float: right;
+  padding-top: @gap-TheMainNav;
+  padding-left: 20px;
+  font-size: 0;
+  line-height: 0;
+
+  > a {
+    height: @height-Btn-TheMainNav;
+    line-height: @height-Btn-TheMainNav;
+    font-size: @fontSize-TheMainNav;
+    .link-custom(@default-FontColor,@default-FontColor,none);
+    padding-left: 20px;
+    //background: url("@{images-url}TheMainNav_User_Icon.png") transparent left center no-repeat;
+    .inline-block();
+    vertical-align: middle;
+    .text-hide();
+    max-width: 200px;
+
+    & + a {
+      //background: url("@{images-url}TheMainNav_UserLogout_Icon.png") transparent left center no-repeat;
+      margin-left: 15px;
+      padding-left: 16px;
+    }
+  }
+}

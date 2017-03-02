@@ -1,0 +1,56 @@
+
+//登录
+.login-page{
+    height:100%;
+    .login-head-wrap{
+        background: @base-BgColor;
+        .login-head-content{
+            position: relative;
+            width: 1200px;
+            height: 72px;
+            margin:0 auto;
+            .login-head-logo{
+                display: block;
+                position: absolute;
+                top:10px;
+                left:0;
+            }
+            .login-admin{
+                position: absolute;
+                top: 50%;
+                right: 150px;
+            }
+        }
+    }
+    .login-layerout{
+        position: relative;
+    }
+    .login-wrap{
+        background: -webkit-linear-gradient(left, #fd5067 , #fd664c); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(right, #fd5067, #fd664c); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(right, #fd5067, #fd664c); /* Firefox 3.6 - 15 */
+        background: linear-gradient(to right, #fd5067 , #fd664c); /* 标准的语法 */
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#fd5067,endcolorstr=#fd664c,gradientType=1);  /*ie8,ie9 滤镜*/
+        position: fixed;
+        left: 0;
+        right: 0;
+        top:72px;
+        bottom:65px;
+        .login-bg{
+            background: url("@{images-url}login_bg.png") no-repeat center center;
+            position: relative;
+            height: 100%;
+            width: 1200px;
+            margin:0 auto;
+        }
+        .login-content{
+            background: @base-BgColor;
+            width: 360px;
+            height: 440px;
+            position: absolute;
+            top:50%;
+            right:130px;
+            margin-top: -220px;
+        }
+    }
+}

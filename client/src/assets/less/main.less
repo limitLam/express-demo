@@ -1,0 +1,46 @@
+// 引入项目样式
+@import '_share';
+
+label{
+    font-size: @smaller-FontSize!important;
+}
+
+#root{
+  height: 100%;
+//   overflow: auto;
+  zoom:1;/*==for IE6/7 Maxthon2==*/
+    >div{
+        &:first-child{
+            height:100%;
+        }
+    }
+    .ant-spin-container{
+        height:100%;
+    }
+
+}
+
+//实名认证--二维码内容
+.qr-code {
+    background: #f3f3f3;
+    th,td{
+        padding: 0;
+    }
+    .code-border{
+        width: 220px;
+        border: 1px solid @base-BorderColor;
+    }
+}
+
+//名称样式
+.name{
+    color: #57c5f7;
+    font-size: 15px;
+}
+
+.color_gray{
+    color: #ccc;
+    &:hover{
+        color: #ccc;
+    }
+}

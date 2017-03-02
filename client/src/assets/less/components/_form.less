@@ -1,0 +1,43 @@
+input::-ms-clear{ display: none; }
+// input[placeholder], [placeholder], *[placeholder] {
+//     color:@base-FontColor !important;
+// }
+.input-placeholder(@base-FontColor, 'Microsoft Yahei');
+
+//表单类
+.form-frame {
+    border: 1px solid @primary-BorderColor;
+    border-bottom: 2px solid @primary-BorderColor;
+    padding-bottom: 30px;
+
+    .form-title {
+        background-color: @form-bgColor-1;
+        font-size: @small-FontSize;
+        color: @heading-FontColor;
+        padding: 12px 15px;
+        border-bottom: 2px solid @primary-BorderColor;
+        p {
+            display: inline-block;
+            font-size: @small-FontSize - 2px;
+            padding-left: 10px;
+            color: @steps-bgColor1;
+        }
+    }
+
+    .form-layer1 {
+        width: 40%;
+        min-width: 320px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .form-layer2 {
+        margin-left: -@form-control-label-width;
+    }
+
+    .form-layer-gray-box {
+        background-color: ( @form-bgColor-1 + #111 ) * 0.955;
+        border-bottom: 1px solid @primary-BorderColor;
+        padding-bottom: 15px;
+    }
+}
